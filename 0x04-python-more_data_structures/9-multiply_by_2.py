@@ -3,10 +3,7 @@
 def multiply_by_2(a_dictionary):
     if a_dictionary is None:
         return None
-    new = dict(a_dictionary)
-    for key, value in new.items():
-        if value % 2 == 0:
+    new = {}
+    for key, value in a_dictionary.items():
             new[key] = value * 2
-        else:
-            new[key] = value
     return new
