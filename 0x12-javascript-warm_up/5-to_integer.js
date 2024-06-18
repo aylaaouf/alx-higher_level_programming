@@ -1,8 +1,13 @@
 #!/usr/bin/node
 const process = require('process');
-const x = parseFloat(process.argv[2]);
-if (!isNaN(x)) {
-  console.log(x);
-} else {
+if (!process.argv[2]) {
   console.log('Not a number');
+} else {
+  let num = parseInt(process.argv[2]);
+  if (!isNaN(num)) {
+    num = String(num);
+    console.log(`My number: ${num}`);
+  } else {
+    console.log('Not a number');
+  }
 }
