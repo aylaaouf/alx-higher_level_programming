@@ -5,8 +5,8 @@ const len = process.argv.length;
 if (len <= 3) {
   console.log(0);
 } else {
-  let fstgreater = Number(process.argv[2]);
-  let secgreater = Number(process.argv[3]);
+  let fstgreater = -Infinity;
+  let secgreater = -Infinity;
   for (let i = 2; i < len; i++) {
     if (fstgreater < Number(process.argv[i])) {
       fstgreater = Number(process.argv[i]);
